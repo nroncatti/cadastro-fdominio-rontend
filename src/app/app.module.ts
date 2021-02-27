@@ -11,6 +11,7 @@ import { ListaValorComponent } from './dominios/lista-valor/lista-valor.componen
 import { ListaDominioComponent } from './dominios/lista-dominio/lista-dominio.component';
 import { MenuComponent } from './dominios/menu/menu.component';
 import { DominioService } from './dominios/dominio.service';
+import { AtualizaValorComponent } from './dominios/atualiza-valor/atualiza-valor.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DominioService } from './dominios/dominio.service';
     CreateValorComponent,
     ListaValorComponent,
     MenuComponent,
-    ListaDominioComponent
+    ListaDominioComponent,
+    AtualizaValorComponent
   ],
   imports: [
     BrowserModule,

@@ -21,11 +21,8 @@
           <tbody>
             <tr *ngFor="let dominio of responseDominio">
               <td class="text-center w-25">{{dominio.codigo}}</td>
-
-           <a routerLink="/listavalor"><td class="text-left w-25">{{dominio.nomeLogico}}</td> </a>
-              
-             <!-- <td>{{dominio.nomeLogico}}</td> -->
-
+            <!--  <td><a routerLink="/listavalores/{{dominio.codigoDominio}}">Editar</a></td>-->
+           <a [routerLink]="['/listavalores', dominio.codigo]"><td class="text-left w-25">{{dominio.nomeLogico}}</td> </a>
            </tr>
           </tbody>
         </table>

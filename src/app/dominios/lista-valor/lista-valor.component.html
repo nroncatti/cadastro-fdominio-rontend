@@ -1,4 +1,50 @@
-<p>
-  lista-valor works!
+<a routerLink="/listadominio">Voltar</a>
+<p></p>
+<app-create-valor></app-create-valor>
+<main role="main">
+  <section class="my-4">
+    <div class="container">
+    </div>
+  </section>
+
+  <section class="mt-5">
+    <div class="container">
+      <div class="table-responsive">
+        <table *ngIf="responseValores" class="table table-bordered table-hover">
+          <thead class="thead-light text-center">
+            <tr>
   
-</p>
+              <th class="w-10"> Código</th>
+              <th class="w-100">Valor</th>
+              
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr *ngFor="let valores of responseValores">
+              <td class="text-center w-25">{{valores.codigo}}</td>
+
+           <td>{{valores.nome}}</td> 
+              
+             <!-- <td>{{dominio.nomeLogico}}</td> -->
+
+           </tr>
+          </tbody>
+        </table>
+        <nav aria-label="Navegação de página exemplo">
+          <ul class="pagination justify-content-end">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">Anterior</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Próximo</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+</main>
