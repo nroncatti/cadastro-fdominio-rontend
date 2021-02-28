@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ResponseDominio } from './dominio.model';
+import { RequestCriaValor, ResponseCriaValor, ResponseDominio } from './dominio.model';
 import { ResponseValores } from './dominio.model';
 
 @Injectable({
@@ -14,7 +14,8 @@ export class DominioService {
 
   valoresUrl = '/dominios/v1/'
 
-  
+  url_post_valor = '/dominios/valores'
+
   constructor(private http: HttpClient) { }
 
   listar(): Observable<ResponseDominio> {
@@ -25,4 +26,9 @@ export class DominioService {
     const _url = `${this.valoresUrl}/${codigoDominio}`;
     return this.http.get<ResponseValores>(_url);
   }
+
+  criarValor(request:RequestCriaValor): Observable<ResponseCriaValor> {
+    return this.http.post<ResponseCriaValor>(this.url_post_valor, request)
+  }
+
 }

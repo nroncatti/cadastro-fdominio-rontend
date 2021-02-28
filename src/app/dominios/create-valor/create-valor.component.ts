@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { RequestCriaValor } from '../dominio.model';
+import { DominioService } from '../dominio.service';
 
 @Component({
   selector: 'app-create-valor',
@@ -7,9 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateValorComponent implements OnInit {
 
-  constructor() { }
+  request: RequestCriaValor = {
+
+    nome: '',
+    codigoGenerico: '',
+  }
+
+  codigoDominio: string;
+
+  constructor(private dominioService:DominioService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.request.codigoGenerico = this.route.snapshot.paramMap.get('codigoDominio')
+     
+    
+  }
+  
+  salvarValor() {
+    this.dominioService.criarValor(this.request).subscribe(res => {
+      this.request = res;
+     
+          });     
   }
 
 }
+
