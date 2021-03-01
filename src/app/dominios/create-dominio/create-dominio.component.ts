@@ -24,11 +24,16 @@ export class CreateDominioComponent implements OnInit {
   ngOnInit() {
     this.request.nomeColunaFisco = 'nome',
     this.request.nomeCodigoFisico = 'codigo'
+    
   }
 
   salvarDominio() {
     this.dominioService.criarDominio(this.request).subscribe(res => {
           });     
+  }
+
+  load() {
+    location.reload()
   }
 
 }
