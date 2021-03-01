@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { RequestCriaValor, ResponseCriaValor, ResponseDominio } from './dominio.model';
+import { RequestCriaDominio, RequestCriaValor, ResponseCriaValor, ResponseDominio } from './dominio.model';
 import { ResponseValores } from './dominio.model';
 
 @Injectable({
@@ -29,6 +29,10 @@ export class DominioService {
 
   criarValor(request:RequestCriaValor): Observable<ResponseCriaValor> {
     return this.http.post<ResponseCriaValor>(this.url_post_valor, request)
+  }
+
+  criarDominio(request:RequestCriaDominio): Observable<void> {
+    return this.http.post<void>(this.dominiosUrl, request)
   }
 
 }

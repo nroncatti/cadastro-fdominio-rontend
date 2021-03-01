@@ -1,4 +1,5 @@
-<p></p>
+<app-create-dominio></app-create-dominio>
+
 <main role="main">
   <section class="my-4">
     <div class="container">
@@ -12,18 +13,20 @@
           <thead class="thead-light text-center">
             <tr>
   
-              <th class="w-10"> Código</th>
-              <th class="w-100">Valor</th>
+              <th class="text-left" > Código</th>
+              <th class="text-left" >Valor</th>
+              <th class="text-center">Editar</th>
               
             </tr>
           </thead>
           
           <tbody>
             <tr *ngFor="let dominio of responseDominio">
-              <td class="text-center w-25">{{dominio.codigo}}</td>
+              <td class="text-center w-10">{{dominio.codigo}}</td>
             <!--  <td><a routerLink="/listavalores/{{dominio.codigoDominio}}">Editar</a></td>-->
-           <a [routerLink]="['/listavalores', dominio.codigo]"><td class="text-left w-25">{{dominio.nomeLogico}}</td> </a>
-           </tr>
+           <a [routerLink]="['/listavalores', dominio.codigo]"><td class="text-left w-10 table-responsive" >{{dominio.nomeLogico}}</td> </a>
+           <td class="text-center"><button type="button" class="btn btn-primary w-10">Editar</button></td> 
+          </tr>
           </tbody>
         </table>
         <nav aria-label="Navegação de página exemplo">

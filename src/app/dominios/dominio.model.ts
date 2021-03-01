@@ -23,3 +23,11 @@ export interface ResponseCriaValor{
     codigoDominio: number
     
     }
+
+export interface RequestCriaDominio {
+    codigoDominio: number,
+	nomeTabelaFisico: string ,
+	nomeLogico: string,
+	nomeCodigoFisico: string ,
+	nomeColunaFisco: string
+}
