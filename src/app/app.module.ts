@@ -12,6 +12,7 @@ import { ListaDominioComponent } from './dominios/lista-dominio/lista-dominio.co
 import { MenuComponent } from './dominios/menu/menu.component';
 import { DominioService } from './dominios/dominio.service';
 import { AtualizaValorComponent } from './dominios/atualiza-valor/atualiza-valor.component';
+import { CotadorComponent } from './cotador/cotador.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AtualizaValorComponent } from './dominios/atualiza-valor/atualiza-valor
     ListaValorComponent,
     MenuComponent,
     ListaDominioComponent,
-    AtualizaValorComponent
+    AtualizaValorComponent,
+    CotadorComponent
   ],
   imports: [
     BrowserModule,

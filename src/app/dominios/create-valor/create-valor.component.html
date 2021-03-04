@@ -1,8 +1,8 @@
-<!-- Button trigger modal -->
+<div class="container">
 <button type="button" class="btn btn-primary" (click)="showModal=true" data-toggle="modal" data-target="#exampleModal">
-  Novo
+  Novo Valor Domínio
 </button>
-
+</div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" [ngClass]="{'show': showModal}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -16,13 +16,9 @@
       <div class="modal-body">
           <div class="form-group">
             <label>Valor</label>
-            <input  class="form-control" placeholder="Digite aqui o valor" [(ngModel)]="request.nome">
+            <input  class="form-control" placeholder="Preencha aqui a descrição do domínio" [(ngModel)]="request.nome">
           </div>
 
-          <div class="form-group">
-            <label> Código</label>
-            <input class="form-control" [(ngModel)]="request.codigoGenerico">
-          </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" (click)="showModal=false" data-dismiss="modal">Close</button>

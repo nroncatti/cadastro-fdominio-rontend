@@ -29,8 +29,13 @@ export class CreateValorComponent implements OnInit {
   salvarValor() {
     this.dominioService.criarValor(this.request).subscribe(res => {
       this.request = res;
-     
+      alert('Registro adicionado com sucesso!')
           });     
+  }
+
+  load() {
+    location.reload();
+    
   }
 
 }

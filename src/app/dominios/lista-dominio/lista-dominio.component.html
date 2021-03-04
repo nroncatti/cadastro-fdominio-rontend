@@ -16,6 +16,7 @@
               <th class="text-left" > Código</th>
               <th class="text-left" >Valor</th>
               <th class="text-center">Editar</th>
+              <th class="text-center">Excluir</th>
               
             </tr>
           </thead>
@@ -25,7 +26,8 @@
               <td class="text-center w-10">{{dominio.codigo}}</td>
             <!--  <td><a routerLink="/listavalores/{{dominio.codigoDominio}}">Editar</a></td>-->
            <a [routerLink]="['/listavalores', dominio.codigo]"><td class="text-left w-10 table-responsive" >{{dominio.nomeLogico}}</td> </a>
-           <td class="text-center"><button type="button" class="btn btn-primary w-10">Editar</button></td> 
+           <td class="text-center"><button type="button" class="btn btn-primary">Editar</button></td> 
+           <td class="text-center"><button type="button" class="btn btn-danger" >Excluir</button></td> 
           </tr>
           </tbody>
         </table>

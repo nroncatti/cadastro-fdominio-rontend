@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { ListaDominioComponent } from './dominios/lista-dominio/lista-dominio.component';
 import { ListaValorComponent } from './dominios/lista-valor/lista-valor.component';
 import { CreateValorComponent } from './dominios/create-valor/create-valor.component';
+import { CotadorComponent } from './cotador/cotador.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'listadominio', component: ListaDominioComponent },
   { path: 'listavalores/:codigoDominio', component: ListaValorComponent },
   { path: 'criavalor', component: CreateValorComponent },
+  { path: 'veiculo', component: CotadorComponent },
   //{ path: '**', pathMatch:'full', redirectTo: 'menu' }
 ];
   

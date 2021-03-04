@@ -1,0 +1,24 @@
+<h3>Cadastro de Veículos</h3>
+<br>
+<div class="col-md-5">
+    <label>Modelo</label>
+    <input  class="form-control"  placeholder="Prencha aqui o nome do Segurado">
+  </div>
+  <br>
+
+  <div class="col-md-5">
+    <label>Versão</label>
+    <input  class="form-control" placeholder="Versão Veículo">
+  </div>
+  <br>
+
+<div class="col-md-3">
+ <b><label for="tipoSeguro" class="control-label">Tipo de Uso</label></b>
+<select class="form-control" id="tipoUso">
+  <option *ngFor="let valores of responseValores">{{valores.nome}}</option>
+</select>
+</div>
+<br>
+<div class="col-md-3">
+<button  class="btn btn-primary">Salvar</button>
+</div>
